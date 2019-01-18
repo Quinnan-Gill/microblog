@@ -2,3 +2,39 @@
 2019-01-16 16:30:25,605 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
 2019-01-16 16:30:37,644 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
 2019-01-16 16:30:54,323 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
+2019-01-17 15:34:48,395 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
+2019-01-17 15:41:38,929 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
+2019-01-17 15:42:32,891 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
+2019-01-17 15:43:11,655 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
+2019-01-17 15:44:37,964 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
+2019-01-17 15:46:50,806 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
+2019-01-17 15:51:24,548 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
+2019-01-17 16:03:59,468 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
+2019-01-17 16:05:23,259 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
+2019-01-17 16:05:54,638 ERROR: Exception on /unfollow/susan [GET] [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/venv/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/Users/quinnangill/Desktop/Coding_Projects/flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/quinnangill/Desktop/Coding_Projects/flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/quinnangill/Desktop/Coding_Projects/flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/quinnangill/Desktop/Coding_Projects/flask/microblog/venv/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/Users/quinnangill/Desktop/Coding_Projects/flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/quinnangill/Desktop/Coding_Projects/flask/microblog/venv/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/quinnangill/Desktop/Coding_Projects/flask/microblog/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/routes.py", line 127, in unfollow
+    flash('You are not following {}').format(username)
+AttributeError: 'NoneType' object has no attribute 'format'
+2019-01-17 16:06:16,968 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
+2019-01-17 16:28:47,381 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
+2019-01-17 16:28:50,054 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
+2019-01-17 16:37:15,742 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
+2019-01-17 16:47:24,687 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
+2019-01-17 17:03:20,019 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
+2019-01-17 17:03:33,617 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:46]
+2019-01-17 22:29:42,212 INFO: Microblog startup [in /Users/quinnangill/Desktop/Coding_Projects/flask/microblog/app/__init__.py:48]

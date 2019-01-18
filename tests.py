@@ -5,7 +5,7 @@ from app.models import User, Post
 
 class UserModelCase(unittest.TestCase):
     def setUp(self):
-        app.confg['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite://'
         db.create_all()
 
     def tearDown(self):
@@ -43,9 +43,9 @@ class UserModelCase(unittest.TestCase):
 
         u1.unfollow(u2)
         db.session.commit()
-        db.assertFalse(u1.is_following(u2))
-        db.assertEqual(u1.followed.count(), 0)
-        db.assertEqual(u2.followers.count(), 0)
+        self.assertFalse(u1.is_following(u2))
+        self.assertEqual(u1.followed.count(), 0)
+        self.assertEqual(u2.followers.count(), 0)
 
     def test_follow_posts(self):
         # create four users
