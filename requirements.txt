@@ -1,0 +1,11 @@
+flask
+flask_sqlalchemy
+flask_migrate
+flask_login
+flask_mail
+flask_bootstrap
+flask_wtf
+jwt
+flask-moment
+flask-babel
+guess_language-spirit
