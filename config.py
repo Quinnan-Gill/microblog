@@ -17,3 +17,4 @@ class Config(object):
     ADMINS = ['your-email@example.com']
     LANGUAGES = ['en', 'es']
     POSTS_PER_PAGE = 25
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
