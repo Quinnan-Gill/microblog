@@ -1,6 +1,5 @@
 import os
 import click
-from app import app
 
 """ if it is not working try:
     export FLASK_APP=microblog.py
