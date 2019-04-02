@@ -12,6 +12,7 @@ from flask_babel import Babel, lazy_gettext as _l
 from config import Config
 from elasticsearch import Elasticsearch 
 from redis import Redis 
+from flask_jwt_extended import JWTManager
 import rq
 
 db = SQLAlchemy()
@@ -23,6 +24,7 @@ mail = Mail()
 bootstrap = Bootstrap()
 moment = Moment()
 babel = Babel()
+jwt = JWTManager()
 
 def create_app(config_class=Config):
     app = Flask(__name__)
@@ -35,6 +37,8 @@ def create_app(config_class=Config):
     bootstrap.init_app(app)
     moment.init_app(app)
     babel.init_app(app)
+    jwt.init_app(app)
+
 
     app.elasticsearch = Elasticsearch([app.config['ELASTICSEARCH_URL']]) \
         if app.config['ELASTICSEARCH_URL'] else None
@@ -51,9 +55,11 @@ def create_app(config_class=Config):
     from app.api import bp as api_bp
     app.register_blueprint(api_bp, url_prefix='/api')
 
+    from app.graph_api import bp as graph_api 
+    app.register_blueprint(graph_api, url_prefix='/graphql')
+
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)
-
 
     if not app.debug and app.testing:
         if app.config['MAIL_SERVER']:

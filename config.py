@@ -19,3 +19,6 @@ class Config(object):
     POSTS_PER_PAGE = 25
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
     REDIS_URL = os.environ.get('REDIS_URL') or 'redis://'
+    JWT_TOKEN_LOCATION='headers'
+    JWT_HEADER_NAME='Authorization'
+    JWT_HEADER_TYPE='JWT'

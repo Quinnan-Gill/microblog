@@ -22,7 +22,7 @@ def get_users():
 @token_auth.login_required
 def get_followers(id):
     user = User.query.get_or_404(id)
-    page = request.args.get('page', 1, type=int)
+    page = request.args.get('page', 1, type=int)    
     per_page = min(request.args.get('per_page', 10, type=int), 100)
     data = User.to_collection_dict(user.followers, page, per_page,
                                    'api.get_followers', id=id)
@@ -41,6 +41,8 @@ def get_followed(id):
 @bp.route('/users', methods=['POST'])
 def create_user():
     data = request.get_json() or {}
+    print("The data is:   ")
+    print(data)
     if 'username' not in data or 'email' not in data or 'password' not in data:
         return bad_request('must include username, email and password fields')
     if User.query.filter_by(username=data['username']).first():
@@ -64,6 +66,8 @@ def update_user(id):
         abort(403)
     user = User.query.get_or_404(id)
     data = request.get_json() or {}
+    print("The data is:   ", end="")
+    print(data)
     if 'username' in data and data['username'] != user.username and \
             User.query.filter_by(username=data['username']).first():
         return bad_request('please use a different username')
